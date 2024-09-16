@@ -232,7 +232,7 @@ const MapComponent = () => {
     
       return (
         <LoadScript
-          googleMapsApiKey="AIzaSyAmSCR556GCAGVTlScbRFx5ZJR--Ado7eE"
+          googleMapsApiKey="API-KEI-AQUI"
           libraries={["marker"]}
         >
           <GoogleMap
