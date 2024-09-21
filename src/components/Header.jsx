@@ -1,31 +1,39 @@
+import { Backpack } from 'lucide-react';
+import { Navbar, Nav, Container, Image } from 'react-bootstrap';
+import Options from './Options';
 function Header() {
   return (
-    <header className="bg-success text-white py-3">
-      <div className="container">
-        <nav className="navbar navbar-expand-lg navbar-dark">
-          <div className="container-fluid">
-            <a className="navbar-brand" href="#">Tu Nombre</a>
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarNav">
-              <ul className="navbar-nav ms-auto">
-                <li className="nav-item">
-                  <a className="nav-link" href="#about">Sobre mí</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#projects">Proyectos</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#contact">Contacto</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
+    <header style={headerStyle}className="bg-dark">
+      <Container>
+        <Navbar expand="lg" variant="dark">
+          <Container fluid>
+            <Options/>
+            <Navbar.Brand href="#">
+              <Image 
+                src="https://www.unicesar.edu.co/wp-content/uploads/2024/05/LOGO-UPC-VERDE-2.png" 
+                alt="Logo" 
+                width={140} // Ajusta el ancho según tus necesidades
+                height={50} // Ajusta la altura según tus necesidades
+                className="d-inline-block align-top"
+              />
+            </Navbar.Brand>
+            
+            {/*<Navbar.Toggle aria-controls="navbarNav" />
+            <Navbar.Collapse id="navbarNav">
+              <Nav className="ms-auto">
+                <Nav.Link href="#about">Sobre mí</Nav.Link>
+                <Nav.Link href="#projects">Proyectos</Nav.Link>
+                <Nav.Link href="#contact">Contacto</Nav.Link>
+              </Nav>
+            </Navbar.Collapse>*/}
+          </Container>
+        </Navbar>
+      </Container>
     </header>
-  )
+  );
 }
-
-export default Header
+const headerStyle={
+    height:"70px",
+    padding:"0px"
+};
+export default Header;
