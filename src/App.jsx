@@ -1,11 +1,9 @@
 import Header from './components/Header';
 import Footer from './components/Footer';
-import MapComponent from './components/map';
 import SideBar from './components/Rutabar';
 import { Container, Row, Col } from 'react-bootstrap';
-import LugaresBar from './components/Options';
 import WelcomeMessage from './components/Welcome';
-
+import Mapa from './components/map';
 import { useState, useEffect } from 'react';
 
 
@@ -17,9 +15,10 @@ function App() {
     setShowModal(true);
   }, []);
   const handleClose = () => setShowModal(false);
+
   return (
     <div>
-      <WelcomeMessage show={showModal} onHide={handleClose} />
+     {/* <WelcomeMessage show={showModal} onHide={handleClose} />*/}
       <Header />
       {/*<LugaresBar/>*/}
       <Container fluid>
@@ -28,7 +27,7 @@ function App() {
             <SideBar />
           </Col>
           <Col xs={12} md={8} className="p-3">
-            <MapComponent />
+            <Mapa />
           </Col>
         </Row>
       </Container>

@@ -2,7 +2,7 @@ import { GoogleMap, useJsApiLoader  } from "@react-google-maps/api";
 
 const libraries = ["marker"];
 
-const MapComponent = () => {
+const Mapa = () => {
   const mapStyles = {
     height: "100%",
     width: "100%"
@@ -12,7 +12,7 @@ const MapComponent = () => {
     lng: -73.2617245380028
   };
   const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: "apikey",
+    googleMapsApiKey: "key",
     libraries
   });
   
@@ -255,4 +255,4 @@ const markers = [
   },
 ];
 
-export default MapComponent;
+export default Mapa;
